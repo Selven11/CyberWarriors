@@ -1,0 +1,76 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* App Bar */
+  .app-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .app-bar h1 {
+    font-size: 1.5em;
+  }
+  
+  .app-bar nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1em;
+  }
+  
+  .app-bar nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 2em;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .section:nth-child(even) {
+    background-color: #e2e2e2;
+  }
+  
+  .section h2 {
+    margin-bottom: 0.5em;
+  }
+  
+  button {
+    padding: 0.5em 1em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+    margin-top: auto;
+  }
+  

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberWarrior Education App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- App Bar -->
+  <header class="app-bar">
+    <h1>CyberWarrior</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#education">Education</a>
+      <a href="#escape-room">Escape Room</a>
+      <a href="#lessons">Lessons</a>
+    </nav>
+  </header>
+
+  <!-- Content Sections -->
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="section">
+      <h2>Welcome to CyberWarrior</h2>
+      <p>Begin your journey in cybersecurity with interactive challenges and lessons.</p>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <h2>Cybersecurity Education</h2>
+      <p>Learn about cyber threats, defense mechanisms, and much more.</p>
+    </section>
+
+    <!-- Escape Room Section -->
+    <section id="escape-room" class="section">
+      <h2>Escape Room</h2>
+      <p>Interactive cybersecurity challenges that simulate real-world scenarios.</p>
+      <button onclick="startEscapeRoom()">Start Escape Room</button>
+    </section>
+
+    <!-- Lessons Section -->
+    <section id="lessons" class="section">
+      <h2>Online / In-Person Lessons</h2>
+      <p>Engage in hands-on lessons with expert guidance.</p>
+      <button onclick="joinLesson()">Join a Lesson</button>
+    </section>
+
+    <!-- CTF Section -->
+    <section id="ctf" class="section">
+      <h2>Capture The Flag (CTF)</h2>
+      <p>Test your skills by solving cybersecurity challenges.</p>
+      <button onclick="startCTF()">Join CTF</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Contact: <a href="mailto:cyberwarrior@example.com">cyberwarrior@example.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
