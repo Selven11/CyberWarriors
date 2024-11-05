@@ -3,34 +3,121 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
   
   body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ffcc;
+    background-color: #0d0d0d;
+    overflow-x: hidden;
+  }
+  
+  /* Landing Page */
+  .landing-page {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('cyberpunk_background.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #00ffcc;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .landing-page h1 {
+    font-size: 4em;
+    position: relative;
+  }
+  
+  .landing-page p {
+    font-size: 1.2em;
+    margin: 20px 0;
+  }
+  
+  .landing-page button {
+    padding: 1em 2em;
+    font-size: 1em;
+    color: #0d0d0d;
+    background-color: #00ffcc;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in;
+  }
+  
+  .landing-page button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Glitch Effect */
+  .glitch {
+    color: #00ffcc;
+    font-size: 4em;
+    position: relative;
+    animation: glitch 1s infinite;
+  }
+  
+  .glitch::before, .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+  }
+  
+  .glitch::before {
+    animation: glitchTop 1s infinite;
+    color: #ff00ff;
+    clip-path: inset(0 0 50% 0);
+  }
+  
+  .glitch::after {
+    animation: glitchBottom 1s infinite;
+    color: #00ffff;
+    clip-path: inset(50% 0 0 0);
+  }
+  
+  /* Keyframes for Glitch Effect */
+  @keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+  }
+  
+  @keyframes glitchTop {
+    0% { transform: translate(0); }
+    20% { transform: translate(-3px, -3px); }
+    40% { transform: translate(3px, 3px); }
+    60% { transform: translate(-3px, 3px); }
+    80% { transform: translate(3px, -3px); }
+    100% { transform: translate(0); }
+  }
+  
+  @keyframes glitchBottom {
+    0% { transform: translate(0); }
+    20% { transform: translate(3px, 3px); }
+    40% { transform: translate(-3px, -3px); }
+    60% { transform: translate(3px, -3px); }
+    80% { transform: translate(-3px, 3px); }
+    100% { transform: translate(0); }
   }
   
   /* App Bar */
   .app-bar {
-    background-color: #333;
-    color: #fff;
+    background-color: rgba(13, 13, 13, 0.9);
     padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .app-bar h1 {
-    font-size: 1.5em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
   }
   
   .app-bar nav a {
-    color: #fff;
+    color: #00ffcc;
     text-decoration: none;
-    margin-left: 1em;
+    margin: 0 1em;
   }
   
   .app-bar nav a:hover {
@@ -39,38 +126,45 @@
   
   /* Sections */
   .section {
-    padding: 2em;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ddd;
+    padding: 4em;
+    background-color: #121212;
+    border-bottom: 2px solid #222;
   }
   
   .section:nth-child(even) {
-    background-color: #e2e2e2;
+    background-color: #1a1a1a;
   }
   
   .section h2 {
+    color: #00ffcc;
     margin-bottom: 0.5em;
   }
   
   button {
-    padding: 0.5em 1em;
-    background-color: #007bff;
+    padding: 0.8em 1.5em;
+    background-color: #ff00ff;
     color: #fff;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
   }
   
   button:hover {
-    background-color: #0056b3;
+    transform: scale(1.1);
   }
   
   /* Footer */
   .footer {
     text-align: center;
     padding: 1em;
-    background-color: #333;
-    color: #fff;
-    margin-top: auto;
+    background-color: #0d0d0d;
+    color: #00ffcc;
+    font-size: 0.9em;
+  }
+  
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
   
