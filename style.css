@@ -10,6 +10,7 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Navbar */
 nav {
     background: #333;
     color: #fff;
@@ -38,25 +39,54 @@ nav ul li a {
     font-weight: bold;
 }
 
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background: #004466;
+/* Parallax Effect for Hero and Other Sections */
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     color: #fff;
+    text-align: center;
+    height: 60vh;
+    position: relative;
 }
 
-section {
-    padding: 50px 20px;
-    text-align: center;
+.parallax.hero {
+    background-image: url('https://images.unsplash.com/photo-1730724583278-151efd042e16?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8'); /* replace with a real image URL */
+}
+
+.parallax#ctf {
+    background-image: url('https://images.unsplash.com/photo-1730463825700-89c6523d6f19?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8'); /* replace with a real image URL */
+}
+
+.parallax#stats {
+    background-image: url('https://images.unsplash.com/photo-1731084901083-cabdd7f51f91?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D'); /* replace with a real image URL */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to make text more readable */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 section h2 {
     margin-bottom: 20px;
     font-size: 2rem;
+    z-index: 1;
 }
 
-#ctf, #lessons, #community, #stats {
-    background: #f9f9f9;
+.hero {
+    padding: 50px 20px;
+}
+
+#lessons, #community, #contact {
+    padding: 50px 20px;
 }
 
 button {
